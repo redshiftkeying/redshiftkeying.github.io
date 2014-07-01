@@ -2,7 +2,7 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8"/>
-    <title>Red something</title>
+    <title>模版</title>
     <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="generator" content="o-blog version 1.2-147-g0568070"/>
@@ -96,7 +96,7 @@
       <div class="container">
 	<ul class="breadcrumb">
   <li><a href="./index.html">首页</a> <span class="divider">/</span></li>
-  <li>Archives</li>
+  <li>模版</li>
   </ul>
 
       </div>
@@ -104,34 +104,129 @@
     <div id="page" class="container">
 
 <article>
-  <div class="article-content">
-    <nav class="archives">
-      <ul class="all">
-  <li><a href="./tips/index.html">Tips</a><ul class="category Tips">
-  <li><a href="./tips/2012/index.html">2012</a><ul class="year 2012">
-  <li><a href="./tips/2012/08/index.html">08</a><ul class="month 2012 8">
-  <li>21 <a href="./tips/2012/08/21_.html">在博文中添加图片</a></li>
-</ul>
-</li><li><a href="./tips/2012/05/index.html">05</a><ul class="month 2012 5">
-  <li>21 <a href="./tips/2012/05/21_static-pages.html">创建静态页面</a></li><li>07 <a href="./tips/2012/05/07_custom-fonts.html">添加自定义字体</a></li><li>03 <a href="./tips/2012/05/03_bootstrap-features.html">一些 bootstrap 特性</a></li>
-</ul>
-</li><li><a href="./tips/2012/03/index.html">03</a><ul class="month 2012 3">
-  <li>20 <a href="./tips/2012/03/20_use-chinese.html">中文测试</a></li>
-</ul>
-</li><li><a href="./tips/2012/02/index.html">02</a><ul class="month 2012 2">
-  <li>10 <a href="./tips/2012/02/10_use-bootstrap.html">使用 Bootstrap 分格</a></li><li>10 <a href="./tips/2012/02/10_add-icons.html">添加图标</a></li><li>09 <a href="./tips/2012/02/09_use-modal.html">使用 modal 显示源代码</a></li>
-</ul>
-</li><li><a href="./tips/2012/01/index.html">01</a><ul class="month 2012 1">
-  <li>15 <a href="./tips/2012/01/15_warning.html">警告</a></li><li>10 <a href="./tips/2012/01/10_html5-example.html">一些 HTML5 示例</a></li><li>07 <a href="./tips/2012/01/07_syntax-org-mode.html">一些 org 语法示例</a></li><li>07 <a href="./tips/2012/01/07_use-tags.html">如何使用标签</a></li><li>07 <a href="./tips/2012/01/07_create-new-post.html">创建一个博客条目</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+  <header class="article-header">
+    <div class="well">
+      <div class="row">
+	<div class="span1">
+	  <div class="qr-code">
+  <img src="http://chart.apis.google.com/chart?chs=50x50&cht=qr&chld=|0&chl=http%3A%2F%2Fredshiftkeying.github.io%2F%2Ftemplates.html"
+       alt="qr-code" />
+</div>
 
-    </nav>
+	</div>
+	<h1 class="offset1" style="font-size: 250%;">模版</h1>
+      </div>
+    </div>
+  </header>
+  <div class="article-content">
+    <p>
+在 <a href="https://github.com/renard/o-blog">o-blog</a> 导出过程中占重头戏的是模版，一组 HTML 的文件。可解析的 Lisp 源码以
+<code>&lt;lisp&gt;</code> 标签嵌入其中。
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #cae682;">h1</span>&gt;&lt;<span style="color: #cae682;">lisp</span>&gt;(ob:blog-title BLOG)&lt;/<span style="color: #cae682;">lisp</span>&gt;&lt;/<span style="color: #cae682;">h1</span>&gt;
+</pre>
+</div>
+
+<p>
+上面的代码片断可导出为如下类似的内容：
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #cae682;">h1</span>&gt;<span style="font-weight: bold; text-decoration: underline;">o-blog</span>&lt;/<span style="color: #cae682;">h1</span>&gt;
+</pre>
+</div>
+
+<div class="alert alert-info"><p class="alert-heading">Information</p>
+
+<p>
+如果不需要其它模版, <a href="https://github.com/renard/o-blog">o-blog</a> 只用以 <code>blog_</code> 打头的模版文件就够了（通过函数
+<code>ob:insert-template</code> ）。
+</p>
+
+<p>
+所有其它的模版只是为了方便而定义。
+</p>
+
+</div>
+
+
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">必要的模版</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<code>blog_</code> 打头的模版。
+</p>
+
+<ul class="org-ul">
+<li><code>blog_static.html</code>: 导出任何静态页面 (函数 <code>ob-write-static</code>).
+</li>
+<li><code>blog_post.html</code>: 导出一篇博文 (函数 <code>ob-write-posts</code>).
+</li>
+<li><code>blog_tags.html</code>: 导出云标签页面 (函数 <code>ob-write-tags</code>).
+</li>
+<li><code>blog_tags-detail.html</code>: 导出匹配特定标签的页面 (函数 <code>ob-write-tags</code>).
+</li>
+<li><code>blog_archive.html</code>: 导出全部归档 (所有类别、所有年、所有月) 页面 (函数 <code>ob-write-index</code>).
+</li>
+<li><code>blog_rss.html</code>: 导出 RSS 订阅 (函数 <code>ob-write-index</code>).
+</li>
+<li><code>blog_index_month.html</code> 导出指定月的索引页面 (函数 <code>ob-write-index</code>).
+</li>
+<li><code>blog_index_year.html</code> 导出指定月的索引页面 (函数 <code>ob-write-index</code>).
+</li>
+<li><code>blog_index_catery.html</code> 导出指定类别的索引页面 (函数 <code>ob-write-index</code>).
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">索引模版</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+以 <code>index_</code> 打头的模版。它们使用所有的 <code>blog_index_*.html</code> 模版来生成一组匹配指定类别、年、月和全部归档的文章列表。
+</p>
+
+<ul class="org-ul">
+<li><code>index_archives.html</code>
+</li>
+<li><code>index_category.html</code>
+</li>
+<li><code>index_month.html</code>
+</li>
+<li><code>index_year.html</code>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">导航模版</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+以 <code>nav_</code> 开头的模版用于生成导航片断：
+</p>
+
+<ul class="org-ul">
+<li><code>nav_links.html</code>: 用于生成用于页首和页尾的的导航菜单。
+</li>
+<li><code>nav_tag-cloud.html</code>: 用于生成页尾的云标签。
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">页面模版</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+以 <code>page_</code> 开头的模版用于生成 HTML 的页头及页尾。
+</p>
+</div>
+</div>
+
   </div>
 </article>
       </div>

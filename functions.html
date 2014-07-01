@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8"/>
+    <title>函数</title>
+    <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="generator" content="o-blog version 1.2-147-g0568070"/>
+    <script src="./style/js/less-1.3.0.min.js" type="text/javascript"></script>
+    <script src="./style/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-modal.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-transition.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-collapse.js" type="text/javascript"></script>
+    <script src="./style/js/prettify.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog.linenumber.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog-fix.js" type="text/javascript"></script>
+    
+    
+  </head>
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container">
+	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+	  <a class="brand" href="./index.html">Red something</a>
+	  <div class="nav-collapse collapse">
+	    <ul class="org-ul">
+<li><a href="./features.html"><i>icon-cog icon-white</i> 特性</a>
+</li>
+
+<li><i><i>icon-book icon-white</i> 文档</i>
+<ul class="org-ul">
+<li><a href="./templates.html">模版</a>
+</li>
+<li><a href="./structures.html">文档结构</a>
+</li>
+<li><a href="./functions.html">函数</a>
+</li>
+<li></li>
+<li><a href="./faq.html">FAQ</a>
+</li>
+<li></li>
+<li><a href="./bug-report.html">反馈软件缺陷</a>
+</li>
+</ul>
+</li>
+
+<li><i><i>icon-file icon-white</i> 近期博文</i>
+<ul class="org-ul">
+<li><a href="Lisp error in nil: (void-function format%20)">在博文中添加图片</a>
+</li>
+<li><a href="Lisp error in nil: (void-function format%20)">创建静态页面</a>
+</li>
+<li><a href="Lisp error in nil: (void-function format%20)">添加自定义字体</a>
+</li>
+<li><a href="./tips/2012/05/03_bootstrap-features.html">一些 bootstrap 特性</a>
+</li>
+<li><a href="./tips/2012/03/20_use-chinese.html">中文测试</a>
+</li>
+</ul>
+</li>
+
+<li><a href="./tags/index.html"><i>icon-tags icon-white</i> 标签</a>
+</li>
+
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> 用户推荐</a>
+</li>
+
+<li><a href="./index.xml"><i>icon-rss icon-white</i> RSS</a>
+</li>
+
+<li><a href="./archives.html"><i>icon-list icon-white</i> 归档</a>
+</li>
+
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> 更新记录</a>
+</li>
+
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> 规划</a>
+</li>
+
+<li><a href="./debug.html">(调试)</a>
+</li>
+</ul>
+
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div class="subnav subnav-fixed visible-desktop">
+      <div class="container">
+	<ul class="breadcrumb">
+  <li><a href="./index.html">首页</a> <span class="divider">/</span></li>
+  <li>函数</li>
+  </ul>
+
+      </div>
+    </div>
+    <div id="page" class="container">
+
+<article>
+  <header class="article-header">
+    <div class="well">
+      <div class="row">
+	<div class="span1">
+	  <div class="qr-code">
+  <img src="http://chart.apis.google.com/chart?chs=50x50&cht=qr&chld=|0&chl=http%3A%2F%2Fredshiftkeying.github.io%2F%2Ffunctions.html"
+       alt="qr-code" />
+</div>
+
+	</div>
+	<h1 class="offset1" style="font-size: 250%;">函数</h1>
+      </div>
+    </div>
+  </header>
+  <div class="article-content">
+    <p>
+Basically any lisp function could be used withing a blog template as long as
+they are known when exporting. Meanwhile some of them are specifically made
+to be used withing templates. These functions are prefixed by <code>ob:</code>.
+</p>
+
+<p>
+Descriptions are taken from function docstrings.
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Function: <code>(ob:get-posts &amp;optional PREDICATE COUNT SORTFUNC COLLECT)</code></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Return posts (from <code>POSTS</code> as defined in <code>org-publish-blog</code>) matching
+<code>PREDICATE</code>. Limit to <code>COUNT</code> results if defined and sorted using
+<code>SORTFUNC</code>.
+</p>
+
+<p>
+<code>PREDICATE</code> is a function run for each post with the post itself as
+argument. If <code>PREDICATE</code> is nil, no filter would be done on posts.
+</p>
+
+<p>
+<code>SORTFUNC</code> is used a <code>sort</code> <code>PREDICATE</code>.
+</p>
+
+<p>
+If <code>COLLECT</code> is defined, only returns the <code>COLLECT</code> field of a
+<code>ob:post</code> structure.
+</p>
+
+<p>
+Examples:
+</p>
+
+<p>
+Getting last 10 posts:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(ob:get-posts nil 10)
+</pre>
+</div>
+
+
+<p>
+Getting post from January 2012:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(ob:get-posts
+   (<span style="color: #8ac6f2; font-weight: bold;">lambda</span> (x)
+      (and (= 2012 (ob:post-year x))
+           (= 1 (ob:post-month x)))))
+</pre>
+</div>
+
+<p>
+Getting all categories:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(ob:get-posts nil nil nil 'category)
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1">Template usages</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+For archive navigation:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #cae682;">nav</span> <span style="color: #cae682;">id</span>=<span style="color: #95e454;">"archives"</span>&gt;
+  &lt;<span style="color: #cae682;">h1</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Archives</span>&lt;/<span style="color: #cae682;">h1</span>&gt;
+  &lt;<span style="color: #cae682;">ul</span>&gt;
+    &lt;<span style="color: #cae682;">lisp</span>&gt;
+      (loop for p in (ob:get-posts nil 10)
+            do (insert (format <span style="color: #95e454;">"&lt;li&gt;&lt;a href=\"</span><span style="color: #cae682;">%s</span>/<span style="color: #cae682;">%s</span>\<span style="color: #95e454;">"&gt;%s&lt;/a&gt;&lt;/li&gt; "</span>
+                               (ob:path-to-root)
+                               (ob:post-htmlfile p)
+                               (ob:post-title p))))
+    &lt;/<span style="color: #cae682;">lisp</span>&gt;
+  &lt;/<span style="color: #cae682;">ul</span>&gt;
+&lt;/<span style="color: #cae682;">nav</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">Function: <code>(ob:get-post-by-id ID)</code></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Return post which id is <code>ID</code>.
+</p>
+</div>
+
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">Template usages</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Posts navigation:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #cae682;">nav</span> <span style="color: #cae682;">class</span>=<span style="color: #95e454;">"articles-nav"</span>&gt;
+  &lt;<span style="color: #cae682;">ul</span>&gt;
+    &lt;<span style="color: #cae682;">lisp</span>&gt;
+      (progn
+        ;; Get previous post
+        (let ((ppost (ob:get-post-by-id (1+ (ob:post-id POST)))))
+          (if ppost
+              (insert (format <span style="color: #95e454;">"&lt;li class=\"</span>prev\<span style="color: #95e454;">"&gt;&lt;a href=\"</span><span style="color: #cae682;">%s</span>/<span style="color: #cae682;">%s</span>\<span style="color: #95e454;">"&gt;%s&lt;/a&gt;&lt;/li&gt;"</span>
+                              (ob:path-to-root)
+                              (ob:post-htmlfile ppost)
+                              (ob:post-title ppost)))
+            (insert <span style="color: #95e454;">"&lt;li&gt;&amp;nbsp;&lt;/li&gt;"</span>)))
+        ;; Get next post
+        (let ((npost (ob:get-post-by-id (1- (ob:post-id POST)))))
+          (if npost
+              (insert (format <span style="color: #95e454;">"&lt;li class=\"</span>next\<span style="color: #95e454;">"&gt;&lt;a href=\"</span><span style="color: #cae682;">%s</span>/<span style="color: #cae682;">%s</span>\<span style="color: #95e454;">"&gt;%s&lt;/a&gt;&lt;/li&gt;"</span>
+                              (ob:path-to-root)
+                              (ob:post-htmlfile npost)
+                              (ob:post-title npost)))
+            (insert <span style="color: #95e454;">"&lt;li&gt;&amp;nbsp;&lt;/li&gt;"</span>))))
+    &lt;/<span style="color: #cae682;">lisp</span>&gt;
+  &lt;/<span style="color: #cae682;">ul</span>&gt;
+&lt;/<span style="color: #cae682;">nav</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Function: <code>(ob:get-snippet NAME)</code></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Get first snippet matching <code>NAME</code>.
+</p>
+</div>
+
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1">Template usages</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Insert the <i>About</i> section in page footer:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #cae682;">h1</span>&gt;<span style="font-weight: bold; text-decoration: underline;">About</span>&lt;/<span style="color: #cae682;">h1</span>&gt;
+&lt;<span style="color: #cae682;">address</span>&gt;
+  &lt;<span style="color: #cae682;">lisp</span>&gt;(ob:post-content-html (ob:get-snippet <span style="color: #95e454;">"About"</span>))&lt;/<span style="color: #cae682;">lisp</span>&gt;
+&lt;/<span style="color: #cae682;">address</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Function: <code>(ob:get-header HEADER &amp;optional ALL)</code></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Get <code>HEADER</code> from blog buffer as defined in <code>BLOG</code> global context variable.
+</p>
+
+<p>
+Returns only fist match except if <code>ALL</code> is defined.
+</p>
+</div>
+
+<div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1">Template usages</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Get the last updated header for rss export:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #cae682;">updated</span>&gt;&lt;<span style="color: #cae682;">lisp</span>&gt;(ob:format-date (ob:get-header <span style="color: #95e454;">"DATE"</span>))&lt;/<span style="color: #cae682;">lisp</span>&gt;&lt;/<span style="color: #cae682;">updated</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">Function: <code>(ob:insert-template TEMPLATE)</code></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Insert <code>TEMPLATE</code> in current buffer.
+</p>
+</div>
+
+<div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1">Template usages</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Insert html header:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #cae682;">lisp</span>&gt;(ob:insert-template <span style="color: #95e454;">"page_header.html"</span>)&lt;/<span style="color: #cae682;">lisp</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6">Function: <code>(ob:format-date DATE &amp;optional FORMAT LOCALE)</code></h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Format <code>DATE</code> using <code>FORMAT</code> and <code>LOCALE</code>.
+</p>
+
+<p>
+<code>DATE</code> can heither be string suitable for <code>parse-time-string</code> or a list of
+interger using <code>current-time</code> format.
+</p>
+
+<p>
+<code>FORMAT</code> is a <code>format-time-string</code> compatible definition. If not
+set ISO8601 <code>%Y-%m-%dT%TZ</code> format would be used.
+</p>
+</div>
+
+<div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1">Template usages</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+Add a human readable timestamp for a post:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-html">Posted on &lt;<span style="color: #cae682;">time</span> <span style="color: #cae682;">datetime</span>=<span style="color: #95e454;">"&lt;lisp&gt; (ob:format-date (ob:post-timestamp POST)) &lt;/lisp&gt;"</span>&gt;
+  &lt;<span style="color: #cae682;">lisp</span>&gt; (ob:format-date (ob:post-timestamp POST) <span style="color: #95e454;">"%A %B, %d %Y at %H:%M:%S"</span>) &lt;/<span style="color: #cae682;">lisp</span>&gt;
+&lt;/<span style="color: #cae682;">time</span>&gt;.
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+  </div>
+</article>
+      </div>
+      <div id="footer">
+	<div class="container">
+	  <div class="row">
+	    <nav class="span3">
+	      <h1>关于</h1>
+	      <p>
+本博客使用 <a href="https://redshiftkeying.github.io">o-blog</a> 架构。
+</p>
+
+	    </nav>
+	    <nav id="links" class="span3">
+	      <h1>链接</h1>
+	      <ul>
+		<ul class="org-ul">
+<li><a href="./index.html"><i>icon-home icon-white</i> 首页</a>
+</li>
+
+<li><a href="Lisp error in nil: (void-function let%20)"><i>icon-file icon-white</i> 近期博文</a>
+</li>
+
+<li><a href="./tags.html"><i>icon-tags icon-white</i> 标签</a>
+</li>
+
+<li><a href="./archives.html"><i>icon-list icon-white</i> 归档博文</a>
+</li>
+
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> 用户推荐</a>
+</li>
+
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> 发展规划</a>
+</li>
+
+<li><a href="./index.xml"><i>icon-rss icon-white</i> 订阅摘要</a>
+</li>
+</ul>
+
+	      </ul>
+	    </nav>
+	    <nav id="archives" class="span3">
+	      <h1><a href="./archives.html">归档</a></h1>
+	      <ul>
+		<li><a href="./tips/2012/08/21_.html">在博文中添加图片</a></li> <li><a href="./tips/2012/05/21_static-pages.html">创建静态页面</a></li> <li><a href="./tips/2012/05/07_custom-fonts.html">添加自定义字体</a></li> <li><a href="./tips/2012/05/03_bootstrap-features.html">一些 bootstrap 特性</a></li> <li><a href="./tips/2012/03/20_use-chinese.html">中文测试</a></li> <li><a href="./tips/2012/02/10_use-bootstrap.html">使用 Bootstrap 分格</a></li> <li><a href="./tips/2012/02/10_add-icons.html">添加图标</a></li> <li><a href="./tips/2012/02/09_use-modal.html">使用 modal 显示源代码</a></li> <li><a href="./tips/2012/01/15_warning.html">警告</a></li> <li><a href="./tips/2012/01/10_html5-example.html">一些 HTML5 示例</a></li> 
+	      </ul>
+	    </nav>
+	    <nav class="tags span3">
+	      <h1><a href="./tags/index.html">标签</a></h1>
+	      <ul>
+  <li style="font-size: 150.00%;"><a href="./tags/bootstrap.html">Bootstrap</a></li> <li style="font-size: 80.00%;"><a href="./tags/html-5.html">html 5</a></li> <li style="font-size: 136.00%;"><a href="./tags/o-blog.html">o-blog</a></li> <li style="font-size: 80.00%;"><a href="./tags/org.html">org</a></li> <li style="font-size: 80.00%;"><a href="./tags/.html">中文</a></li> <li style="font-size: 220.00%;"><a href="./tags/.html">用例</a></li> 
+</ul>
+
+	    </nav>
+	  </div>
+	</div>
+	<div class="copyright" style="text-align: center;">
+	  <p>
+copyright © 2012-2014 <a href="mailto:redshiftkeying@gmail.com">Aliphon Fen</a>.
+</p>
+
+	  <p>功能取自 <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
+          <a href="https://google.com/+AliphonFen?rel=author">Google</a>
+	</div>
+      </div>
+</body>
+</html>
+

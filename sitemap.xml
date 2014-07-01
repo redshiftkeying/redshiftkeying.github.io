@@ -9,13 +9,175 @@
   
   <url>
     <loc>http://redshiftkeying.github.io//index.html</loc>
-    <lastmod>2014-06-15T17:42:00Z</lastmod>
+    <lastmod>2014-07-01T12:08:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<url>
+    <loc>http://redshiftkeying.github.io//tags.html</loc>
+    <lastmod>2014-07-01T12:08:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<url>
+    <loc>http://redshiftkeying.github.io//changelog.html</loc>
+    <lastmod>2014-07-01T12:08:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<url>
+    <loc>http://redshiftkeying.github.io//debug.html</loc>
+    <lastmod>2014-07-01T12:08:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<url>
+    <loc>http://redshiftkeying.github.io//features.html</loc>
+    <lastmod>2014-07-01T12:08:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<url>
+    <loc>http://redshiftkeying.github.io//templates.html</loc>
+    <lastmod>2014-07-01T12:08:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<url>
+    <loc>http://redshiftkeying.github.io//structures.html</loc>
+    <lastmod>2014-07-01T12:08:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<url>
+    <loc>http://redshiftkeying.github.io//functions.html</loc>
+    <lastmod>2014-07-01T12:08:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<url>
+    <loc>http://redshiftkeying.github.io//bug-report.html</loc>
+    <lastmod>2014-07-01T12:08:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<url>
+    <loc>http://redshiftkeying.github.io//testimonials.html</loc>
+    <lastmod>2014-07-01T12:08:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<url>
+    <loc>http://redshiftkeying.github.io//roadmap.html</loc>
+    <lastmod>2014-07-01T12:08:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<url>
+    <loc>http://redshiftkeying.github.io//faq.html</loc>
+    <lastmod>2014-07-01T12:08:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<url>
+    <loc>http://redshiftkeying.github.io//org-key.html</loc>
+    <lastmod>2014-07-01T12:08:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 
 
-  
+  <url>
+    <loc>http://redshiftkeying.github.io//tips/2012/08/21_.html</loc>
+    <lastmod>2012-08-21T10:43:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>http://redshiftkeying.github.io//tips/2012/05/21_static-pages.html</loc>
+    <lastmod>2012-05-21T12:48:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>http://redshiftkeying.github.io//tips/2012/05/07_custom-fonts.html</loc>
+    <lastmod>2012-05-07T16:38:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>http://redshiftkeying.github.io//tips/2012/05/03_bootstrap-features.html</loc>
+    <lastmod>2012-05-03T21:40:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>http://redshiftkeying.github.io//tips/2012/03/20_use-chinese.html</loc>
+    <lastmod>2012-03-20T09:46:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>http://redshiftkeying.github.io//tips/2012/02/10_use-bootstrap.html</loc>
+    <lastmod>2012-02-10T01:19:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>http://redshiftkeying.github.io//tips/2012/02/10_add-icons.html</loc>
+    <lastmod>2012-02-10T00:19:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>http://redshiftkeying.github.io//tips/2012/02/09_use-modal.html</loc>
+    <lastmod>2012-02-09T23:13:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>http://redshiftkeying.github.io//tips/2012/01/15_warning.html</loc>
+    <lastmod>2012-01-15T20:40:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>http://redshiftkeying.github.io//tips/2012/01/10_html5-example.html</loc>
+    <lastmod>2012-01-10T20:58:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>http://redshiftkeying.github.io//tips/2012/01/07_syntax-org-mode.html</loc>
+    <lastmod>2012-01-07T11:23:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>http://redshiftkeying.github.io//tips/2012/01/07_use-tags.html</loc>
+    <lastmod>2012-01-07T00:28:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>http://redshiftkeying.github.io//tips/2012/01/07_create-new-post.html</loc>
+    <lastmod>2012-01-07T00:13:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
 

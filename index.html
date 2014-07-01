@@ -28,9 +28,66 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-	  <a class="brand" href="./index.html">ITJI</a>
+	  <a class="brand" href="./index.html">Red something</a>
 	  <div class="nav-collapse collapse">
-	    Lisp error in nil: (wrong-type-argument arrayp nil)
+	    <ul class="org-ul">
+<li><a href="./features.html"><i>icon-cog icon-white</i> 特性</a>
+</li>
+
+<li><i><i>icon-book icon-white</i> 文档</i>
+<ul class="org-ul">
+<li><a href="./templates.html">模版</a>
+</li>
+<li><a href="./structures.html">文档结构</a>
+</li>
+<li><a href="./functions.html">函数</a>
+</li>
+<li></li>
+<li><a href="./faq.html">FAQ</a>
+</li>
+<li></li>
+<li><a href="./bug-report.html">反馈软件缺陷</a>
+</li>
+</ul>
+</li>
+
+<li><i><i>icon-file icon-white</i> 近期博文</i>
+<ul class="org-ul">
+<li><a href="Lisp error in nil: (void-function format%20)">在博文中添加图片</a>
+</li>
+<li><a href="Lisp error in nil: (void-function format%20)">创建静态页面</a>
+</li>
+<li><a href="Lisp error in nil: (void-function format%20)">添加自定义字体</a>
+</li>
+<li><a href="./tips/2012/05/03_bootstrap-features.html">一些 bootstrap 特性</a>
+</li>
+<li><a href="./tips/2012/03/20_use-chinese.html">中文测试</a>
+</li>
+</ul>
+</li>
+
+<li><a href="./tags/index.html"><i>icon-tags icon-white</i> 标签</a>
+</li>
+
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> 用户推荐</a>
+</li>
+
+<li><a href="./index.xml"><i>icon-rss icon-white</i> RSS</a>
+</li>
+
+<li><a href="./archives.html"><i>icon-list icon-white</i> 归档</a>
+</li>
+
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> 更新记录</a>
+</li>
+
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> 规划</a>
+</li>
+
+<li><a href="./debug.html">(调试)</a>
+</li>
+</ul>
+
 	  </div>
 	</div>
       </div>
@@ -48,7 +105,124 @@
 
 <article>
   <div class="article-content">
-    
+    <div class="o_blog_row">
+
+<div class="figure">
+<p>
+</p>
+</div>
+
+<div class="o_blog_hero_unit">
+<h1>愚棂</h1>
+<p>
+本博客使用 <a href="http://orgmode.org/">org-mode</a> 搭建。
+</p>
+
+</div>
+
+<h1 style="font-size: 300%;">新的开始</h1>
+
+<p>
+#+o<sub>blog</sub><sub>row</sub><sub>column</sub> 4
+</p>
+
+
+<div class="hero-unit" style="font-size: 200%;">
+
+<p>
+<a href="./features.html"><i>icon-cog icon-white</i> 简介</a>
+</p>
+
+<p>
+<a href="https://github.com/renard/o-blog"><i>icon-github-sign icon-white</i> GitHub</a>
+</p>
+
+<p>
+<a href="./changelog.html"><i>icon-pencil icon-white</i> 记录</a>
+</p>
+
+
+</div>
+
+</div>
+
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">设置</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+首先，你需要安装有 <a href="http://www.gnu.org/s/emacs">emacs</a> (在版本 24 下测试，在 23 下可能也行) 和 <a href="http://orgmode.org/">org-mode</a> (在版本
+7.8.09 下测试，其它的 <i>可能</i> 也行)。然后你有两种方法可以安装 <a href="https://github.com/renard/o-blog">o-blog</a>.
+</p>
+
+<div class="row "><div class="span5 ">
+
+
+<h4>使用 el-get</h4>
+
+<p>
+要使用 <a href="https://github.com/dimitri/el-get">el-get</a>, 安装起来很容易。你所要做的不过是将 <code>o-blog</code> 添加到
+<code>el-get-sources</code> 中，然后执行：
+</p>
+
+<p>
+<code>M-x el-get-install o-blog</code>
+</p>
+
+<p>
+如果你使用 <code>el-get</code> 4 或更高，你只需要执行:
+</p>
+
+<p>
+<code>M-x el-get-install o-blog</code>
+</p>
+
+</div><div class="span6 ">
+
+
+<h4>手动安装</h4>
+
+<p>
+首先从 <a href="http://github.com">Github</a> 克隆 <i>git</i> 仓库源码。
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-bash">cd ~/.emacs.d
+git clone https://github.com/renard/o-blog.git
+</pre>
+</div>
+
+<p>
+将如下内容添加到你的 <code>~/.emacs.d/init.el</code> 文件中:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(add-to-list 'load-path <span style="color: #95e454;">"~/.emacs.d/o-blog"</span>)
+(<span style="color: #8ac6f2; font-weight: bold;">require</span> '<span style="color: #e5786d;">o-blog</span>)
+</pre>
+</div>
+
+
+</div></div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">发布博文</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+打开文件 <code>~/.emacs.d/o-blog/example/sample.org</code> 然后执行 <code>M-x
+org-publish-blog</code>. 输出的站点默认保存在 <code>~/.emacs.d/o-blog/out</code>.
+</p>
+
+<p>
+详情参见 <a href="tips/index.html">tips</a>.
+</p>
+</div>
+</div>
 
   </div>
 </article>
@@ -58,32 +232,61 @@
 	  <div class="row">
 	    <nav class="span3">
 	      <h1>关于</h1>
-	      Lisp error in nil: (wrong-type-argument arrayp nil)
+	      <p>
+本博客使用 <a href="https://redshiftkeying.github.io">o-blog</a> 架构。
+</p>
+
 	    </nav>
 	    <nav id="links" class="span3">
 	      <h1>链接</h1>
 	      <ul>
-		Lisp error in nil: (wrong-type-argument arrayp nil)
+		<ul class="org-ul">
+<li><a href="./index.html"><i>icon-home icon-white</i> 首页</a>
+</li>
+
+<li><a href="Lisp error in nil: (void-function let%20)"><i>icon-file icon-white</i> 近期博文</a>
+</li>
+
+<li><a href="./tags.html"><i>icon-tags icon-white</i> 标签</a>
+</li>
+
+<li><a href="./archives.html"><i>icon-list icon-white</i> 归档博文</a>
+</li>
+
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> 用户推荐</a>
+</li>
+
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> 发展规划</a>
+</li>
+
+<li><a href="./index.xml"><i>icon-rss icon-white</i> 订阅摘要</a>
+</li>
+</ul>
+
 	      </ul>
 	    </nav>
 	    <nav id="archives" class="span3">
 	      <h1><a href="./archives.html">归档</a></h1>
 	      <ul>
-		
+		<li><a href="./tips/2012/08/21_.html">在博文中添加图片</a></li> <li><a href="./tips/2012/05/21_static-pages.html">创建静态页面</a></li> <li><a href="./tips/2012/05/07_custom-fonts.html">添加自定义字体</a></li> <li><a href="./tips/2012/05/03_bootstrap-features.html">一些 bootstrap 特性</a></li> <li><a href="./tips/2012/03/20_use-chinese.html">中文测试</a></li> <li><a href="./tips/2012/02/10_use-bootstrap.html">使用 Bootstrap 分格</a></li> <li><a href="./tips/2012/02/10_add-icons.html">添加图标</a></li> <li><a href="./tips/2012/02/09_use-modal.html">使用 modal 显示源代码</a></li> <li><a href="./tips/2012/01/15_warning.html">警告</a></li> <li><a href="./tips/2012/01/10_html5-example.html">一些 HTML5 示例</a></li> 
 	      </ul>
 	    </nav>
 	    <nav class="tags span3">
 	      <h1><a href="./tags/index.html">标签</a></h1>
 	      <ul>
-  
+  <li style="font-size: 150.00%;"><a href="./tags/bootstrap.html">Bootstrap</a></li> <li style="font-size: 80.00%;"><a href="./tags/html-5.html">html 5</a></li> <li style="font-size: 136.00%;"><a href="./tags/o-blog.html">o-blog</a></li> <li style="font-size: 80.00%;"><a href="./tags/org.html">org</a></li> <li style="font-size: 80.00%;"><a href="./tags/.html">中文</a></li> <li style="font-size: 220.00%;"><a href="./tags/.html">用例</a></li> 
 </ul>
 
 	    </nav>
 	  </div>
 	</div>
 	<div class="copyright" style="text-align: center;">
-	  Lisp error in nil: (wrong-type-argument arrayp nil)
+	  <p>
+copyright © 2012-2014 <a href="mailto:redshiftkeying@gmail.com">Aliphon Fen</a>.
+</p>
+
 	  <p>功能取自 <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
+          <a href="https://google.com/+AliphonFen?rel=author">Google</a>
 	</div>
       </div>
 </body>
