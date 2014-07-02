@@ -364,13 +364,13 @@ C-c C-c d        从当前项中删除一个属性。
 <h2 id="sec-2">基本使用</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-    <b>加粗</b> 加粗
-    <i>倾斜</i> 倾斜
-    <span class="underline">下划线</span> 下划线
-    下标： H<sub>2</sub> O
-    上标： E=mc<sup>2</sup>
-    等宽字：  <code>git</code>  或者 <code>git</code> 对比宽度：git
-《    注：在o-blog中=git=被转意为code段
+<b>加粗</b> 加粗
+<i>倾斜</i> 倾斜
+<span class="underline">下划线</span> 下划线
+下标： H<sub>2</sub> O
+上标： E=mc<sup>2</sup>
+等宽字：  <code>git</code>  或者 <code>git</code> 对比宽度：git
+注：在o-blog中=git=被转意为code段
 </p>
 <ul class="org-ul">
 <li>段落
@@ -384,21 +384,23 @@ C-c C-c d        从当前项中删除一个属性。
 </blockquote>
 </li>
 <li>区块快捷键
-s    #+begin<sub>src</sub> &#x2026; #+end<sub>src</sub>
-e    #+begin<sub>example</sub> &#x2026; #+end<sub>example</sub>  : 单行的例子以冒号开头
-q    #+begin<sub>quote</sub> &#x2026; #+end<sub>quote</sub>      通常用于引用，与默认格式相比左右都会留出缩进
-v    #+begin<sub>verse</sub> &#x2026; #+end<sub>verse</sub>      默认内容不换行，需要留出空行才能换行
-c    #+begin<sub>center</sub> &#x2026; #+end<sub>center</sub>
-l    #+begin<sub>latex</sub> &#x2026; #+end<sub>latex</sub>
+</li>
+</ul>
+<pre class="example">
+s    #+begin_src ... #+end_src
+e    #+begin_example ... #+end_example  : 单行的例子以冒号开头
+q    #+begin_quote ... #+end_quote      通常用于引用，与默认格式相比左右都会留出缩进
+v    #+begin_verse ... #+end_verse      默认内容不换行，需要留出空行才能换行
+c    #+begin_center ... #+end_center
+l    #+begin_latex ... #+end_latex
 L    #+latex:
-h    #+begin<sub>html</sub> &#x2026; #+end<sub>html</sub>
+h    #+begin_html ... #+end_html
 H    #+html:
-a    #+begin<sub>ascii</sub> &#x2026; #+end<sub>ascii</sub>
+a    #+begin_ascii ... #+end_ascii
 A    #+ascii:
 i    #+index: line
 I    #+include: line
-</li>
-</ul>
+</pre>
 <p>
 使用&lt;s加TAB快速创建
 </p>
@@ -407,7 +409,7 @@ I    #+include: line
 <div class="org-src-container">
 
 <pre class="src src-c"><span class="linenr">1: </span>def <span style="color: #92a65e; font-weight: bold;">ction_sleep</span>
-<span class="linenr">2: </span><span style="color: #cae682;">sleep</span>.<span style="color: #8ac6f2; font-weight: bold;">do</span>
+<span class="linenr">2: </span>  <span style="color: #cae682;">sleep</span>.<span style="color: #8ac6f2; font-weight: bold;">do</span>
 <span class="linenr">3: </span>end
 </pre>
 </div>

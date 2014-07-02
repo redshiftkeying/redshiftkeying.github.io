@@ -528,8 +528,7 @@ shortcut).
 &lt;/p&gt;
 
 
-&lt;div class="row show-grid"&gt;&lt;div class="span6 "&gt;
-
+&lt;div class="o_blog_row"&gt;
 &lt;p&gt;
 &lt;b&gt;Example&lt;/b&gt;
 &lt;/p&gt;
@@ -545,8 +544,9 @@ shortcut).
 &lt;/div&gt;
 
 
-&lt;/div&gt;&lt;div class="span6 "&gt;
-
+&lt;p&gt;
+#+o&lt;sub&gt;blog&lt;/sub&gt;&lt;sub&gt;row&lt;/sub&gt;&lt;sub&gt;column&lt;/sub&gt; 6
+&lt;/p&gt;
 
 &lt;p&gt;
 &lt;b&gt;Output&lt;/b&gt;
@@ -569,10 +569,7 @@ Column 2
 
 &lt;/div&gt;&lt;/div&gt;
 
-
-
-&lt;/div&gt;&lt;/div&gt;
-
+&lt;/div&gt;
 
 
 &lt;p&gt;
